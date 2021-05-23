@@ -1,0 +1,11 @@
+{
+	"_id" : ObjectId("5e9df6de0fcb86ea47a43014"),
+	"marca" : "Apple",
+	"modelo" : "Iphone 11",
+	"descricao" : "O mais novo modelo",
+	"sistema" : "Ios 13",
+	"memoria" : "128GB",
+	"chips" : 1,
+	"preco" : NumberDecimal("4999.99"),
+	"quantidade" : 7
+}

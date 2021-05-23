@@ -1,0 +1,75 @@
+// db.produtos.insertOne({
+//     marca: "Apple",
+//     modelo: "Iphone 11",
+//     descricao: "O mais novo modelo",
+//     sistema: "Ios 13",
+//     memoria: "128GB",
+//     chips: 1,
+//     preco: NumberDecimal("4999.99")
+// })
+
+// db.clientes.insertOne({
+//     nome : "Bruno",
+//     endereco : "Run Vergueiro, 3185",
+//     email: "bruno@example.com",
+//     senha: "bruno123",
+// })
+
+
+// db.clientes.insertOne({
+//     nome : "Giovanni",
+//     endereco : "Rua do Ouvidor, 50",
+//     email: "giovanni@example.com",
+//     senha: "giovanni123",
+// })
+
+// db.clientes.updateMany({},{
+//     $set: {
+//         carrinho:{
+//             produtos: []
+//         }
+//     }
+// })
+
+// var produto = db.produtos.findOneAndUpdate({
+//     "modelo": "Iphone 11",
+//     quantidade: {$gt : 0}
+// },
+// {
+//     $inc: { quantidade :-1 }
+// },
+// {
+//     projection: {
+//         marca : 1,
+//         modelo: 1,
+//         preco: 1,
+//     }
+// }
+// )
+
+// db.clientes.update({
+//     nome: "Bruno"
+// },
+// {
+//     $push :
+//     { "carrinho.produtos": produto}
+
+// })
+
+db.clientes.aggregate([
+    {
+        $match: {nome: "Giovanni"}
+    },
+    {
+        $project:{
+            _id: 0,
+            id_cliente: "$_id",
+            endereco: "$endereco",
+            data: ISODate(),
+            produtos: "$carrinho.produtos",
+            valorTotal: {
+                $sum: "$carrinho.produtos.preco"
+            }
+        }
+    } 
+])

@@ -1,0 +1,16 @@
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.exe
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.deps.json
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.runtimeconfig.json
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.runtimeconfig.dev.json
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.dll
+C:\git\estudo\Csharp101\bin\Debug\net5.0\ref\Csharp101.dll
+C:\git\estudo\Csharp101\bin\Debug\net5.0\Csharp101.pdb
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.csprojAssemblyReference.cache
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.AssemblyInfoInputs.cache
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.AssemblyInfo.cs
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.csproj.CoreCompileInputs.cache
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.dll
+C:\git\estudo\Csharp101\obj\Debug\net5.0\ref\Csharp101.dll
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.pdb
+C:\git\estudo\Csharp101\obj\Debug\net5.0\Csharp101.genruntimeconfig.cache
