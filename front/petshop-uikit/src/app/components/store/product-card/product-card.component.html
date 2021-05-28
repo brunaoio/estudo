@@ -1,0 +1,13 @@
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-height-1-1" uk-grid>
+  <div class=" uk-card-media-left uk-flex uk-flex-middle">
+    <img src="{{ product.images[0] }}" alt="" class="uk-align-center">
+  </div>
+  <div class="uk-card-body">
+    <h3 class="uk-card-title">{{ product.price/100 | currency: 'BRL' }}</h3>
+    <p>{{ product.title}}</p>
+    <button class="uk-button uk-button-default" (click)="addToCart()">
+      <span class="uk-icon uk-margin-small-right" uk-icon="icon: cart"></span>
+      Adicionar
+    </button>
+  </div>
+</div>
