@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="modal.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 2em;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <brunao-modal>
+        <h1 slot="title">Please confirm</h1>
+        <p>With your confirmation you agree to pay the full amount!</p>
+    </brunao-modal>
+
+    <p>Please confirm your choice</p>
+
+    <button id="btnShowDetails">Show details and confirm</button>
+
+    <script>
+        const buttonDetails = document.querySelector("#btnShowDetails");
+        const modal = document.querySelector("brunao-modal");
+
+        modal.addEventListener('confirm', () => {
+            console.log('Confirmou pagamento!');
+        });
+
+        modal.addEventListener('cancel', () => {
+            console.log('Desistiu do pagamento!');
+        });
+        buttonDetails.addEventListener('click', () => {
+            //modal.setAttribute('opened', '');
+            if (!modal.isOpen) {
+                modal.open();
+                console.log('Opening....');
+            }
+        });
+    </script>
+</body>
+
+</html>
