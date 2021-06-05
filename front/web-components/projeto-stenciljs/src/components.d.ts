@@ -7,7 +7,15 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BrioSideDrawer {
+        "open": () => Promise<void>;
+        "opened": boolean;
         "titulo": string;
+    }
+    interface BrioTooltip {
+        "icon": string;
+        "opened": boolean;
+        "texto": string;
+        "toogle": () => Promise<void>;
     }
 }
 declare global {
@@ -17,16 +25,30 @@ declare global {
         prototype: HTMLBrioSideDrawerElement;
         new (): HTMLBrioSideDrawerElement;
     };
+    interface HTMLBrioTooltipElement extends Components.BrioTooltip, HTMLStencilElement {
+    }
+    var HTMLBrioTooltipElement: {
+        prototype: HTMLBrioTooltipElement;
+        new (): HTMLBrioTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "brio-side-drawer": HTMLBrioSideDrawerElement;
+        "brio-tooltip": HTMLBrioTooltipElement;
     }
 }
 declare namespace LocalJSX {
     interface BrioSideDrawer {
+        "opened"?: boolean;
         "titulo"?: string;
+    }
+    interface BrioTooltip {
+        "icon"?: string;
+        "opened"?: boolean;
+        "texto"?: string;
     }
     interface IntrinsicElements {
         "brio-side-drawer": BrioSideDrawer;
+        "brio-tooltip": BrioTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -34,6 +56,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "brio-side-drawer": LocalJSX.BrioSideDrawer & JSXBase.HTMLAttributes<HTMLBrioSideDrawerElement>;
+            "brio-tooltip": LocalJSX.BrioTooltip & JSXBase.HTMLAttributes<HTMLBrioTooltipElement>;
         }
     }
 }

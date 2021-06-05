@@ -1,0 +1,16 @@
+@startuml system-context-diagram-for-internet-banking-system-c4context
+!include resources/C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_TOP_DOWN()
+
+Person(customer, "Personal Banking Customer", "A customer of the bank, with personal bank accounts.", $link="")
+System(BankingSystem, "Internet Banking System", "Allows customers to view information ab...", $link="")
+System(Mainframe, "Mainframe Banking System", "Stores all of the core banking informat...", $link="")
+System(MailSystem, "E-mail system", "The internal Microsoft Exchange e-mail...", $link="")
+
+Rel(customer, BankingSystem, "uses")
+Rel_Back(customer, MailSystem, "Sends e-mails to")
+Rel_Neighbor(BankingSystem, MailSystem, "Sends e-mails", "SMTP" )
+Rel(BankingSystem, Mainframe, "uses")
+@enduml
