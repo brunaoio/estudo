@@ -20,8 +20,9 @@ export class SideDrawer {
     }
 
     @Method()
-    open() {
+    async open() {
         this.opened = true;
+        return this.opened;
     }
     render() {
         let mainContent = <slot></slot>;

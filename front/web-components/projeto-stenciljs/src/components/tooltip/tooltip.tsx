@@ -11,8 +11,9 @@ export class Tooltip {
     @Prop({ reflect: true, mutable: true }) opened = false;
 
     @Method()
-    toogle() {
+    async toogle() {
         this.opened = !this.opened;
+        return this.opened;
         //console.log(this.opened);
     }
     render() {

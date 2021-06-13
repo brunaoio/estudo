@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,20 @@
     <title>Document</title>
     <script src="tooltip.js"></script>
     <script src="confirm-link.js"></script>
+    <!-- <script type="module"
+        src="https://unpkg.com/brio-components-test@0.0.1/dist/projeto-stenciljs/projeto-stenciljs.esm.js">
+    </script> -->
+    <script type="module" src="node_modules/brio-components-test/dist/projeto-stenciljs/projeto-stenciljs.esm.js">
+    </script>
+    <!-- <script type="module" src="script/projeto-stenciljs/projeto-stenciljs/projeto-stenciljs.esm.js"></script> -->
     <style>
-        html{
-            --color-primary: rgb(235, 247, 70);
+        html {
+            --color-primary: rgb(0, 0, 70);
             font-family: sans-serif;
         }
-       
 
-        brunao-tooltip{
+
+        brunao-tooltip {
             /* border: 2px solid blue; */
         }
 
@@ -23,18 +30,21 @@
         } */
     </style>
 </head>
+
 <body>
     <!-- <template id="tooltip-template">
         <slot>Some default</slot><span>(?)</span>
     </template> -->
-
+    <brio-stock-price></brio-stock-price>
+    <brio-stock-finder></brio-stock-finder>
     <p>Teste de <brunao-tooltip class="important" text="Web Components são nativos nos Browsers mais modernos">
-        <span class="highlight"> Web Components</span>
-        
+            <span class="highlight"> Web Components</span>
+
         </brunao-tooltip>. Não é bem legal?</p>
 
-         <brunao-tooltip></brunao-tooltip>
-         
-         <a is="brunao-confirm-link" href="https://google.com">Google</a>
+    <brunao-tooltip></brunao-tooltip>
+
+    <a is="brunao-confirm-link" href="https://google.com">Google</a>
 </body>
+
 </html>

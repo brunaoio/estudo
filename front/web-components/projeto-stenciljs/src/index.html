@@ -10,31 +10,26 @@
   <script nomodule src="/build/projeto-stenciljs.js"></script>
   <style>
     body {
+      --color-primary: blue;
       font-family: sans-serif;
 
-    }
-
-    .side-nav ul {
-      list-style: none;
-    }
-
-    .side-nav li {
-      margin: 1rem 0;
-    }
-
-    .side-nav a {
-      text-decoration: none;
-      color: black;
-    }
-
-    .side-nav a:hover {
-      font-size: 1.05rem;
     }
 
   </style>
 </head>
 
 <body>
+  <brio-stock-price stock-symbol="IBM"></brio-stock-price>
+  <brio-stock-finder></brio-stock-finder>
+  <!-- <script>
+    const stockFinder = document.querySelector("brio-stock-finder");
+    stockFinder.addEventListener('brioStockSymbolClicked', event => {
+      console.log(event);
+    })
+
+  </script> -->
+
+
   <button id="btn-side-drawer">Abrir o Side Drawer</button>
   <brio-side-drawer titulo="Main Menu">
 
@@ -65,6 +60,25 @@
     }, 3000);
 
   </script>
+  <style>
+    .side-nav ul {
+      list-style: none;
+    }
+
+    .side-nav li {
+      margin: 1rem 0;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .side-nav a:hover {
+      font-size: 1.05rem;
+    }
+
+  </style>
 </body>
 
 </html>

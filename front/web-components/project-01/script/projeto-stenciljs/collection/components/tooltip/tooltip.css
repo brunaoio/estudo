@@ -1,0 +1,35 @@
+:host {
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+
+:host([opened]) #texto-tooltip {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#icon {
+  background: black;
+  border-radius: 3rem;
+  color: white;
+  margin: 0 0.5rem 0rem;
+  position: relative;
+  padding: 0 0.5rem;
+  top: -0.3rem;
+  right: 0;
+  cursor: pointer;
+}
+
+#texto-tooltip {
+  background: #000;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem;
+  width: 45%;
+  padding: 0.3rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
